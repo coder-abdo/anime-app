@@ -43,7 +43,7 @@ export const AnimePage = () => {
           ) : (
             <Loader />
           )}
-          <ButtonLink isback to="/" data-testid="back-btn">
+          <ButtonLink isback="back" to="/" data-testid="back-btn">
             Back to Animes
           </ButtonLink>
         </PageContainer>

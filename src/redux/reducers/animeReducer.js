@@ -1,10 +1,11 @@
 import {
   FETCH_ANIMES,
   FETCH_CHARACTERS,
-  FETCH_ANIME
+  FETCH_ANIME,
+  SEARCH_ANIME
 } from "../actionsTypes/actionsTypes";
 const initialState = {
-  animes: [],
+  animes: JSON.parse(localStorage.getItem("animes")) || [],
   singleAnime: {},
   characters: []
 };
@@ -26,6 +27,11 @@ export const animeReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         singleAnime: payload
+      };
+    case SEARCH_ANIME:
+      return {
+        ...state,
+        animes: payload
       };
     default:
       return state;

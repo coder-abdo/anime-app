@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: ${props => (props.anime ? "50rem" : "25rem")};
+  grid-auto-rows: ${props => (props.anime === "anime" ? "50rem" : "25rem")};
   grid-gap: 2rem;
   @media (max-width: 50em) {
     grid-template-columns: repeat(3, 1fr);
@@ -27,11 +27,13 @@ export const ButtonLink = styled(Link)`
   padding: 1rem 2rem;
   font-size: 1.4rem;
   box-shadow: none;
-  align-self: ${props => (props.isBack ? "flex-start" : "center")};
-  margin: ${props => (props.isBack ? "2rem 0" : "")};
+  align-self: ${props => (props.isback === "back" ? "flex-start" : "center")};
+  margin: ${props => (props.isback === "back" ? "2rem 0" : "")};
   transition: box-shadow 0.3s ease-out;
   &:hover {
     box-shadow: ${props =>
-      props.isback ? "2px 2px 0 var(--text-color)" : "2px 2px 0 #fff"};
+      props.isback === "back"
+        ? "2px 2px 0 var(--text-color)"
+        : "2px 2px 0 #fff"};
   }
 `;

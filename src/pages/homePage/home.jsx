@@ -1,12 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchTopAnimes } from "../../redux/actions/fetchAnimes";
-import { Anime } from "../../components/anime/Anime";
+import { fetchTopAnimes, searchAnimes } from "../../redux/actions/fetchAnimes";
+import { Animes } from "../../components/animes/Animes";
 import { Loader } from "../../components/loader/Loader";
-import { Container, AnimesTitle } from "../../sharedStyle/Container";
+import { AnimesTitle } from "../../sharedStyle/Container";
+import { SearchAnimeForm } from "./homePageStyle";
 export const Home = () => {
   const { animes } = useSelector(state => state.animes);
   const dispatch = useDispatch();
+  const [query, setQuery] = useState("");
+  const [title, setTitle] = useState("top 50 animes");
+  const handleQueryChange = e => {
+    setQuery(e.target.value);
+  };
+  const handleQuerySubmit = e => {
+    e.preventDefault();
+    if (query) {
+      dispatch(searchAnimes(query));
+      setTitle(`${query} results`);
+    }
+    setQuery("");
+  };
   // console.log(animes);
   useEffect(() => {
     dispatch(fetchTopAnimes());
@@ -14,23 +28,20 @@ export const Home = () => {
   }, []);
   return (
     <>
-      <AnimesTitle>Top 50 Animes </AnimesTitle>
-      <Container anime>
-        {!!animes.length ? (
-          animes.map(({ mal_id, image_url, url, score, title }) => (
-            <Anime
-              key={mal_id}
-              image={image_url}
-              title={title}
-              score={score}
-              url={url}
-              id={mal_id}
-            />
-          ))
-        ) : (
-          <Loader />
-        )}
-      </Container>
+      <SearchAnimeForm onSubmit={handleQuerySubmit}>
+        <input
+          type="text"
+          value={query}
+          onChange={handleQueryChange}
+          placeholder="Search Your Fav Anime"
+          data-testid="search-input"
+        />
+        <button type="submit" data-testid="search-submit-btn">
+          search
+        </button>
+      </SearchAnimeForm>
+      <AnimesTitle data-testid="main-title">{title} </AnimesTitle>
+      <>{!!animes.length ? <Animes animes={animes} /> : <Loader />}</>
     </>
   );
 };
