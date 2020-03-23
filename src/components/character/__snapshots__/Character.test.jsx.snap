@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Charcter properley 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm bQfzZP"
+  >
+    <div
+      class="imgContainer"
+    >
+      <img
+        alt="john name"
+        src="just photo"
+      />
+    </div>
+    <footer>
+      <h4
+        data-testid="character-name"
+      >
+        name: john name
+      </h4>
+      <h4
+        data-testid="character-role"
+      >
+        role: hero
+      </h4>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

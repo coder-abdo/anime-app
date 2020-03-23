@@ -14,7 +14,7 @@ describe("render Anime ", () => {
     score: 2
   };
   const history = createBrowserHistory();
-  const { container, getByTestId } = render(
+  const { container, getByTestId, asFragment } = render(
     <Router history={history}>
       <Anime {...mockProps} />
     </Router>
@@ -23,6 +23,7 @@ describe("render Anime ", () => {
   const animeScore = getByTestId("anime-score");
   test("render Anime Component with props properly", () => {
     expect(container).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
   test("more details after clicking the more detail button", () => {
     const { getByTestId } = render(

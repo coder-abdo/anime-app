@@ -13,18 +13,9 @@ import { Home } from "./home";
 import { Store } from "../../redux/store/store";
 afterEach(cleanup);
 describe("render home page with list of animes and without", () => {
-  const mockAnimesList = [
-    {
-      male_id: "123-fgd",
-      image_url: "dummy.jpg",
-      title: "anime title",
-      score: 4.5,
-      url: "https://www.animes.com"
-    }
-  ];
   const history = createBrowserHistory();
   test("render home page properly", () => {
-    const { container } = render(
+    const { container, asFragment } = render(
       <Provider store={Store}>
         <Router history={history}>
           <Home />
@@ -32,6 +23,7 @@ describe("render home page with list of animes and without", () => {
       </Provider>
     );
     expect(container).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test("should render loader before list anime", () => {

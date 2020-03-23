@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Anime  render Anime Component with props properly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm gItdEj"
+  >
+    <div
+      class="more-detail"
+    >
+      <a
+        class="more-link"
+        data-testid="more-details"
+        href="/12"
+      >
+        more details
+      </a>
+    </div>
+    <div
+      class="imgContainer"
+    >
+      <img
+        alt="anime title"
+        src="some image url"
+      />
+    </div>
+    <div
+      class="details"
+    >
+      <h3
+        data-testid="anime-title"
+      >
+        anime title
+      </h3>
+      <footer>
+        <h4
+          data-testid="anime-score"
+        >
+          score: 2
+        </h4>
+        <a
+          href="dummy url"
+        >
+          myAnime list page
+        </a>
+      </footer>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render single anime page the anime page render in the document 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxheI clsAXF"
+  >
+    <h1
+      class="sc-AxhUy iWKeEK"
+      data-testid="single-anime-title"
+    />
+    <img
+      class="sc-Axmtr juqOmg"
+    />
+    <p
+      data-testid="synopsis"
+    />
+    <div
+      class="sc-AxjAm efKchL"
+      data-testid="loader"
+    >
+      <div
+        class="sc-AxirZ dZCFLP"
+      />
+    </div>
+    <a
+      class="sc-AxgMl cbKzbU"
+      data-testid="back-btn"
+      href="/"
+      isback="back"
+    >
+      Back to Animes
+    </a>
+  </div>
+</DocumentFragment>
+`;

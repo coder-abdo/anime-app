@@ -9,8 +9,11 @@ test("render Charcter properley", () => {
     name: "john name",
     role: "hero"
   };
-  const { container, getByTestId } = render(<Character {...mokeCharacter} />);
+  const { container, getByTestId, asFragment } = render(
+    <Character {...mokeCharacter} />
+  );
   expect(container).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
   expect(getByTestId("character-name").textContent).toBe("name: john name");
   expect(getByTestId("character-role").textContent).toBe("role: hero");
 });
