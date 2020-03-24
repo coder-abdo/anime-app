@@ -5,6 +5,8 @@ export const CharacterContainer = styled.div`
   .imgContainer {
     height: 75%;
     overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     &:hover {
       img {
         transform: scale(1.05);

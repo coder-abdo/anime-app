@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Animes Component by passing suitable props 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxirZ jomUug"
+    data-testid="animes"
+  >
+    <div
+      class="sc-AxjAm gItdEj"
+    >
+      <div
+        class="more-detail"
+      >
+        <a
+          class="more-link"
+          data-testid="more-details"
+          href="/123-56hg"
+        >
+          more details
+        </a>
+      </div>
+      <div
+        class="imgContainer"
+      >
+        <img
+          alt="dummy title"
+          src="image.jpg"
+        />
+      </div>
+      <div
+        class="details"
+      >
+        <h3
+          data-testid="anime-title"
+        >
+          dummy title
+        </h3>
+        <footer>
+          <h4
+            data-testid="anime-score"
+          >
+            score: 4.5
+          </h4>
+          <a
+            href="https://www.anime-url.com"
+          >
+            myAnime list page
+          </a>
+        </footer>
+      </div>
+    </div>
+    <div
+      class="sc-AxjAm gItdEj"
+    >
+      <div
+        class="more-detail"
+      >
+        <a
+          class="more-link"
+          data-testid="more-details"
+          href="/987-vnhg"
+        >
+          more details
+        </a>
+      </div>
+      <div
+        class="imgContainer"
+      >
+        <img
+          alt="dummy2 title"
+          src="image2.jpg"
+        />
+      </div>
+      <div
+        class="details"
+      >
+        <h3
+          data-testid="anime-title"
+        >
+          dummy2 title
+        </h3>
+        <footer>
+          <h4
+            data-testid="anime-score"
+          >
+            score: 4.5
+          </h4>
+          <a
+            href="https://www.anime-url.com"
+          >
+            myAnime list page
+          </a>
+        </footer>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

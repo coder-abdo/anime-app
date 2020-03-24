@@ -6,10 +6,11 @@ import App from "./App";
 import { Store } from "./redux/store/store";
 afterEach(cleanup);
 test("renders the app properly", () => {
-  const { container } = render(
+  const { container, asFragment } = render(
     <Provider store={Store}>
       <App />
     </Provider>
   );
   expect(container).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot();
 });

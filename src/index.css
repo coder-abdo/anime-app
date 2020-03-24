@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
 :root {
   --ff: "Open Sans", sans-serif;
-  --main-color: #2c003e;
-  --secondary-color: #512b58;
+  --main-color: #ff7272;
+  --secondary-color: #ffb0cd;
   --text-color: #fe346e;
   --text-color-2: #d2fafb;
+  --black-color: #323232;
 }
 * {
   padding: 0;

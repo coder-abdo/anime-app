@@ -21,7 +21,6 @@ export const Home = () => {
     }
     setQuery("");
   };
-  // console.log(animes);
   useEffect(() => {
     dispatch(fetchTopAnimes());
     // eslint-disable-next-line

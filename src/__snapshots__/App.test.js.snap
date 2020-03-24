@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the app properly 1`] = `
+<DocumentFragment>
+  <div>
+    <form
+      class="sc-AxheI kYvwBi"
+    >
+      <input
+        data-testid="search-input"
+        placeholder="Search Your Fav Anime"
+        type="text"
+        value=""
+      />
+      <button
+        data-testid="search-submit-btn"
+        type="submit"
+      >
+        search
+      </button>
+    </form>
+    <h1
+      class="sc-AxiKw eBJYAL"
+      data-testid="main-title"
+    >
+      top 50 animes 
+    </h1>
+    <div
+      class="sc-AxhUy lmioNN"
+      data-testid="loader"
+    >
+      <div
+        class="sc-AxgMl cIiRZo"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

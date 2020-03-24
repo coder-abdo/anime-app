@@ -6,7 +6,7 @@ export const PageContainer = styled.div`
   p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-    color: var(--secondary-color);
+    color: var(--black-color);
     font-weight: 400;
   }
 `;
